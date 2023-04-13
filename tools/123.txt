@@ -1,0 +1,112 @@
+
+cls_preds shape:,  torch.Size([8, 153600, 3])                                                                                        | 0/161 [00:00<?, ?it/s]
+
+ box_preds shape:  torch.Size([8, 153600, 7])
+
+ box_dir_cls_preds shape:  torch.Size([8, 153600, 2])
+
+ cls_preds shape:,  torch.Size([8, 153600, 3])
+
+ box_preds shape:  torch.Size([8, 153600, 7])
+
+ box_dir_cls_preds shape:  torch.Size([8, 153600, 2])
+
+ cls_preds shape:,  torch.Size([8, 153600, 3])
+
+ cls_preds shape:,  torch.Size([8, 153600, 3])
+
+ box_preds shape:  torch.Size([8, 153600, 7])
+
+ box_preds shape:  torch.Size([8, 153600, 7])
+
+ box_dir_cls_preds shape:  torch.Size([8, 153600, 2])
+
+ box_dir_cls_preds shape:  torch.Size([8, 153600, 2])
+
+
+# predict_boxes_when_training
+batch_cls_preds shape:  torch.Size([8, 153600, 3])
+
+batch_box_preds shape:  torch.Size([8, 153600, 7])
+
+dir_cls_preds shape:  torch.Size([8, 153600, 2])
+
+batch_cls_preds shape:  torch.Size([8, 153600, 3])
+
+batch_box_preds shape:  torch.Size([8, 153600, 7])
+
+dir_cls_preds shape:  torch.Size([8, 153600, 2])
+
+batch_cls_preds shape:  torch.Size([4, 153600, 3])
+
+batch_box_preds shape:  torch.Size([4, 153600, 7])
+
+dir_cls_preds shape:  torch.Size([4, 153600, 2])
+
+box_cls_labels shape,  torch.Size([12, 307200])
+
+
+RuntimeError: The size of tensor a (153600) must match the size of tensor b (614400) at non-singleton dimension 1
+RuntimeError: The size of tensor a (153600) must match the size of tensor b (307200) at non-singleton dimension 1
+
+
+
+1。 正确 get_cls_layer_loss：
+cls_preds shape,  torch.Size([12, 153600, 3])                                                                                        | 0/108 [00:00<?, ?it/s]
+
+box_cls_labels shape,  torch.Size([12, 153600])
+
+cls_targets shape,  torch.Size([12, 153600])
+
+one_hot_targets shape,  torch.Size([12, 153600, 4])
+
+
+2。 正确 get_box_reg_layer_loss：
+
+box_reg_targets,  torch.Size([12, 153600, 7])
+
+box_preds,  torch.Size([12, 153600, 7])
+
+anchors,  torch.Size([12, 153600, 7])
+
+dir_logits shape:  torch.Size([12, 153600, 2])
+
+dir_targets shape:  torch.Size([12, 153600, 2])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ box_reg_targets,  torch.Size([12, 153600, 7])                                                                  | 14/108 [00:05<00:34,  2.72it/s, total_it=14]
+
+ box_preds,  torch.Size([12, 153600, 7])
+
+ anchors,  torch.Size([12, 153600, 7])
+
+ box_reg_targets,  torch.Size([12, 153600, 7])
+
+ box_preds,  torch.Size([12, 153600, 7])
+
+ anchors,  torch.Size([12, 153600, 7])
+
+ box_reg_targets,  torch.Size([12, 153600, 7])
+
+ box_preds,  torch.Size([12, 153600, 7])
+
+ anchors,  torch.Size([12, 153600, 7])
+
+ box_reg_targets,  torch.Size([12, 153600, 7])
+
+ box_preds,  torch.Size([12, 153600, 7])
+
+ anchors,  torch.Size([12, 153600, 7])
