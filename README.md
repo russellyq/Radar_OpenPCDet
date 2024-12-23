@@ -16,3 +16,19 @@ Astyx Hires
 
 View-of-Delft
 ![](docs/radar_detection_VoD.gif)
+
+
+## Acknowledgement
+
+This is the repo related our paper:
+
+```bibtex
+@inproceedings{yan2023mvfan,
+  title={Mvfan: Multi-view feature assisted network for 4d radar object detection},
+  author={Yan, Qiao and Wang, Yihan},
+  booktitle={International Conference on Neural Information Processing},
+  pages={493--511},
+  year={2023},
+  organization={Springer}
+}
+```
